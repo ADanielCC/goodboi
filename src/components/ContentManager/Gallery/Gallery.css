@@ -1,0 +1,60 @@
+/* Style the custom arrow buttons */
+/* Style the custom arrow buttons */
+.arrow {
+    z-index: 3; /* Set a higher z-index to make them appear above images */
+    background-color: rgba(0, 0, 0, 0.5); /* Background color for arrows */
+    width: 60px; /* Width of the arrows */
+    height: 60px; /* Height of the arrows */
+    border-radius: 50%; /* Make the buttons round */
+    font-size: 24px; /* Font size of the arrows */
+    color: white; /* Text color of the arrows */
+    line-height: 60px; /* Vertically center the text */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transitions */
+    position: absolute; /* Position the buttons absolutely */
+    top: 50%; /* Vertically center the buttons */
+    transform: translateY(-50%); /* Adjust vertical positioning */
+    cursor: pointer; /* Add pointer cursor for hover effect */
+    display: flex; /* Make the buttons flex containers */
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+    border: 2px solid transparent; /* Add a transparent border initially */
+  }
+  
+  /* Style the custom arrow buttons on hover */
+  .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
+  }
+  
+  /* Style the left custom arrow button */
+  .arrow-left {
+    left: 10px; /* Adjust the position of the left arrow */
+  }
+  
+  /* Style the right custom arrow button */
+  .arrow-right {
+    right: 10px; /* Adjust the position of the right arrow */
+  }
+  
+  /* Style the custom arrow buttons on click */
+  .arrow.active {
+    border-color: white; /* Set the border color to white on click */
+  }
+  
+  
+  /* Center the carousel items vertically */
+  .carousel .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* Set the maximum height and aspect ratio for gallery images */
+  .gallery-image {
+    width: 100%; /* Set your desired width */
+    max-height: 600px; /* This will maintain the aspect ratio */
+    display: block;
+    user-select: none;
+    object-fit: contain;
+  }
+  

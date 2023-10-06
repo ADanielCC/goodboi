@@ -5,6 +5,9 @@ import Contact from './Contact/Contact';
 import Messaging from './Messaging/Messaging';
 import Gallery from './Gallery/Gallery';
 import Landing from "./Landing/Landing";
+import image1 from "../../assets/image1.png";
+import image2 from "../../assets/image2.png";
+import image3 from "../../assets/image3.png";
 
 import LinkButtons from "./LinkButtons/LinkButtons";
 import './ContentManager.css';
@@ -29,6 +32,12 @@ class ContentManager extends Component {
       redTitle: "red-title",
       blueTitle: "blue-title",
     };
+
+    const images = [
+      { url: image1, alt: "Image 1" },
+      { url: image2, alt: "Image 2" },
+      { url: image3, alt: "Image 3" },
+    ];
 
     return (
       <div className="content-manager">
@@ -72,7 +81,7 @@ class ContentManager extends Component {
           {activeSection === "about" && <AboutUs className="content" {...commonProps} />}
           {activeSection === "contact" && <Contact className="content" {...commonProps} />}
           {activeSection === "messaging" && <Messaging className="content" {...commonProps} />}
-          {activeSection === "gallery" && <Gallery className="content" {...commonProps} />}
+          {activeSection === "gallery" && <Gallery className="content" images={images} {...commonProps} />}
         </div>
 
         

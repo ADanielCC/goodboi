@@ -1,15 +1,77 @@
 import React, { Component } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleLeft, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
+import "./Gallery.css";
 
 class Gallery extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isFullscreen: false,
+      pauseOnHover: true,
+      activeArrow: null, // Track the active arrow (left or right)
+    };
+  }
+
+  handleImageClick = () => {
+    this.setState((prevState) => ({
+      isFullscreen: !prevState.isFullscreen,
+    }));
+  };
+
+  handleArrowClick = (arrow) => {
+    this.setState({ activeArrow: arrow });
+  };
+
   render() {
-    const { className,redTitle,blueTitle} =this.props; // Get the className prop
+    const { isFullscreen, pauseOnHover, activeArrow } = this.state;
+    const { images } = this.props;
+
     return (
-      <div 
-      ref={this.props.galleryRef}
-      className={className}
-      >
-        <h2 className={redTitle}>Gallery</h2>
-        <p>Display images in a carousel-style format.</p>
+      <div className={`gallery ${isFullscreen ? "fullscreen" : ""}`}>
+        <Carousel autoPlay={!isFullscreen} stopOnHover={pauseOnHover} renderArrowPrev={(onClickHandler, hasPrev, label) =>
+          hasPrev && (
+            <button
+              type="button"
+              onClick={() => {
+                onClickHandler();
+                this.handleArrowClick("left"); // Set the active arrow to "left" on click
+              }}
+              title={label}
+              className={`arrow arrow-left ${activeArrow === "left" ? "active" : ""}`}
+            >
+              <FontAwesomeIcon icon={faArrowCircleLeft} />
+            </button>
+          )
+        } renderArrowNext={(onClickHandler, hasNext, label) =>
+          hasNext && (
+            <button
+              type="button"
+              onClick={() => {
+                onClickHandler();
+                this.handleArrowClick("right"); // Set the active arrow to "right" on click
+              }}
+              title={label}
+              className={`arrow arrow-right ${activeArrow === "right" ? "active" : ""}`}
+            >
+              <FontAwesomeIcon icon={faArrowCircleRight} />
+            </button>
+          )
+        }>
+          {images.map((image, index) => (
+            <div key={index}>
+              <img
+                src={image.url}
+                alt={image.alt}
+                className="gallery-image"
+                onClick={this.handleImageClick}
+              />
+            </div>
+          ))}
+        </Carousel>
       </div>
     );
   }
