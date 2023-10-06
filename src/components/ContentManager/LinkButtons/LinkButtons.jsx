@@ -19,7 +19,7 @@ class LinkButtons extends Component {
             <FontAwesomeIcon icon={faFacebook} />
           </a>
 
-          <a Href="tel:070-565-85-82" className="phone-button">
+          <a href="tel:070-565-85-82" className="phone-button">
           <FontAwesomeIcon icon={faPhone} />
           </a>
 

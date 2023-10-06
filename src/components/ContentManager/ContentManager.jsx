@@ -8,6 +8,7 @@ import Landing from "./Landing/Landing";
 import image1 from "../../assets/image1.png";
 import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
+import image4 from "../../assets/image4.png";
 
 import LinkButtons from "./LinkButtons/LinkButtons";
 import './ContentManager.css';
@@ -37,6 +38,7 @@ class ContentManager extends Component {
       { url: image1, alt: "Image 1" },
       { url: image2, alt: "Image 2" },
       { url: image3, alt: "Image 3" },
+      { url: image4, alt: "Image 4" },
     ];
 
     return (
