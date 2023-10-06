@@ -16,14 +16,17 @@
   .content {
     background-color: red;
     margin: 15px;
+    padding: 10px;
   }
   
   .sections-wrapper {
     margin-right: 50px; /* Adjust the margin as needed */
     background-color: blue;
-    width: 50%;
-    margin-left: 50px;
-    margin-top: 50px;
+    width: 90%;
+    margin: 15px;
+    margin-left: 25px;
+
+   
     padding: 12px;
     border-radius: 15px;
    

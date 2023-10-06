@@ -1,0 +1,39 @@
+.linkButtonsWrapper{
+    background-color: teal;
+}
+
+/* Style for the contact buttons */
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for the email button */
+.email-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style for the Facebook button */
+.facebook-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #1877f2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Style for the icon inside the buttons */
+.icon {
+    margin-right: 8px; /* Adjust spacing as needed */
+    font-size: 20px; /* Adjust the size of the icon */
+}
