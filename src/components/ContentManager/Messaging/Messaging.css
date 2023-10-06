@@ -1,0 +1,43 @@
+/* Add this CSS to your Messaging.css file */
+
+/* Container for each form field */
+.form-field {
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align input fields to the right */
+    margin-bottom: 10px; /* Adjust the spacing between fields */
+  }
+  
+  /* Label for the form field */
+  .form-label {
+    
+    flex: 1;
+    text-align: right;
+    margin-right: 10px; /* Adjust the spacing between label and input */
+    font-weight: bold; /* Make labels bold, if desired */
+  }
+  
+  /* Input fields (text, email, tel) */
+  .form-input {
+    flex: 2;
+    padding: 5px; /* Adjust padding as needed */
+  }
+  
+  /* Textarea for the message field */
+  .form-textarea {
+    flex: 2;
+    padding: 5px; /* Adjust padding as needed */
+    height: 150px; /* Adjust the height of the textarea */
+  }
+  
+  /* Button for submitting */
+  .form-button {
+    margin-top: 10px; /* Adjust the spacing between the textarea and the button */
+  }
+
+  .form-wrapper{
+    font-size:30px;
+    color:red;
+  }
+  

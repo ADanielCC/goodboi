@@ -9,6 +9,7 @@
   top: 0;
   right: 0;
   overflow-y: scroll;
+  z-index: 1;
   /* Enable vertical scrolling if content overflows */
 }
 
@@ -41,8 +42,55 @@
 }
 
 .red-title {
-  color: red;
+  color: rgb(216, 74, 74);
 }
 .blue-title{
-  color:blue;
+  color:rgb(95, 95, 243);
+}
+
+/* Style for the buttons in .content-manager */
+.content-manager .content-manager button {
+  color: black; /* Set the text color to black */
+  background: none; /* Remove button background */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Add pointer cursor for hover effect */
+  font-size: 16px; /* Set the font size as desired */
+  text-decoration: none; /* Remove default text underline */
+  margin: 5px; /* Add some margin between buttons */
+  transition: color 0.3s, border-bottom 0.3s; /* Add smooth transition for color change and underline */
+}
+
+/* Style for the active button in .content-manager */
+.content-manager .content-manager button.active {
+  border-bottom: 2px solid red; /* Add red underline for active button */
+  transition: color 0.3s, border-bottom 0.3s; /* Add smooth transition for color change and underline */
+}
+
+/* Hover effect in .content-manager */
+.content-manager .content-manager button:hover {
+  color: red; /* Change text color to red on hover */
+  transition: color 0.3s; /* Add smooth transition for color change */
+}
+
+.button-wrapper button {
+  color: black; /* Set the text color to black */
+  background: none; /* Remove button background */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Add pointer cursor for hover effect */
+  font-size: 16px; /* Set the font size as desired */
+  text-decoration: none; /* Remove default text underline */
+  margin: 5px; /* Add some margin between buttons */
+  transition: color 0.3s, border-bottom 0.3s; /* Add smooth transition for color change and underline */
+}
+
+/* Style for the active button in .button-wrapper */
+.button-wrapper button.active {
+  border-bottom: 2px solid red; /* Add red underline for active button */
+  transition: color 0.3s, border-bottom 0.3s; /* Add smooth transition for color change and underline */
+}
+
+/* Hover effect in .button-wrapper */
+.button-wrapper button:hover {
+  color: red; /* Change text color to red on hover */
+  transition: color 0.3s; /* Add smooth transition for color change */
 }

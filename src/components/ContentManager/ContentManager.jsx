@@ -15,7 +15,6 @@ class ContentManager extends Component {
 
     this.state = {
       activeSection: "landing",
-      //Sets the initial loading to landing on load 
     };
   }
 
@@ -28,31 +27,55 @@ class ContentManager extends Component {
     const { activeSection } = this.state;
     const commonProps = {
       redTitle: "red-title",
-      blueTitle: "blue-title", // You can add more common props here
+      blueTitle: "blue-title",
     };
-  
+
     return (
       <div className="content-manager">
-        {/* Navigation or buttons to switch between sections */}
-        {/* <button onClick={() => this.setActiveSection("services")}>Services</button> */}
-        <button onClick={() => this.setActiveSection("landing")}>Start</button>
-        <button onClick={() => this.setActiveSection("about")}>About Us</button>
-        <button onClick={() => this.setActiveSection("contact")}>Contact</button>
-        <button onClick={() => this.setActiveSection("messaging")}>Messaging</button>
-        <button onClick={() => this.setActiveSection("gallery")}>Gallery</button>
-  
-        {/* Render the active section */}
-        {/* {activeSection === "services" && <Services {...commonProps} />} */}
         <div className="sections-wrapper">
+        <div className="button-wrapper">
+          <button
+            onClick={() => this.setActiveSection("landing")}
+            className={activeSection === "landing" ? "active" : ""}
+          >
+            Start
+          </button>
+          <button
+            onClick={() => this.setActiveSection("about")}
+            className={activeSection === "about" ? "active" : ""}
+          >
+            Om oss
+          </button>
+          <button
+            onClick={() => this.setActiveSection("contact")}
+            className={activeSection === "contact" ? "active" : ""}
+          >
+            Info
+          </button>
+          <button
+            onClick={() => this.setActiveSection("messaging")}
+            className={activeSection === "messaging" ? "active" : ""}
+          >
+            Kontakta oss
+          </button>
+          <button
+            onClick={() => this.setActiveSection("gallery")}
+            className={activeSection === "gallery" ? "active" : ""}
+          >
+            Bilder
+          </button>
+        </div>
           <Services className="content" {...commonProps} />
           <LinkButtons {...commonProps} />
-  
+
           {activeSection === "landing" && <Landing className="content" {...commonProps} />}
           {activeSection === "about" && <AboutUs className="content" {...commonProps} />}
           {activeSection === "contact" && <Contact className="content" {...commonProps} />}
           {activeSection === "messaging" && <Messaging className="content" {...commonProps} />}
           {activeSection === "gallery" && <Gallery className="content" {...commonProps} />}
         </div>
+
+        
       </div>
     );
   }

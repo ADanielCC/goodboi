@@ -3,19 +3,32 @@
     display: flex;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
+    z-index: 500;
 }
 
 /* Style for the contact buttons */
 .contact-buttons {
     display: flex;
+    padding-right: 50px;
     flex-direction: row; /* Arrange icons horizontally */
 }
 
 /* Style for the email button */
 .email-button,
+.phone-button,
 .facebook-button {
     text-decoration: none;
-    color: #ffffff; 
+    
     margin-right: 10px; /* Adjust spacing between icons */
-    font-size: 30px; /* Adjust the size of the icons */
+    font-size: 80px; /* Adjust the size of the icons */
+}
+.email-button{
+    margin-right: 25px;
+    color: #8f8f8f; 
+}
+.facebook-button {
+    color:rgb(79, 97, 253);
+}
+.phone-button{
+    color: #23f123;
 }
