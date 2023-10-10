@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './LinkButtons.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope,faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope,faPhone, } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 class LinkButtons extends Component {
@@ -12,7 +12,7 @@ class LinkButtons extends Component {
         <div className="contact-buttons center-align">
 
           <a href="mailto:michelle.g@bahnhof.se" className="email-button">
-            <FontAwesomeIcon icon={faEnvelope} />
+          <FontAwesomeIcon icon={faEnvelope} />
           </a>
 
           <a href="https://www.facebook.com" className="facebook-button">

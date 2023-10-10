@@ -20,15 +20,18 @@
     text-decoration: none;
     
     margin-right: 10px; /* Adjust spacing between icons */
-    font-size: 80px; /* Adjust the size of the icons */
+    font-size: 40px; /* Adjust the size of the icons */
+    margin: right 15px;
 }
 .email-button{
     margin-right: 25px;
-    color: #8f8f8f; 
+    color: #f76767; 
+    margin-left: 15px;
 }
 .facebook-button {
     color:rgb(79, 97, 253);
 }
 .phone-button{
     color: #23f123;
+    margin-left: 15px;
 }

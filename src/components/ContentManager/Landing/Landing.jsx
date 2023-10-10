@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default class Landing extends Component {
   render() {
@@ -13,8 +15,9 @@ export default class Landing extends Component {
        
         <h2 className={redTitle}>VÄLKOMMEN TILL HUNDPENSIONATET</h2>
         <h1 className={blueTitle}>PÅ GOD TASS</h1>
+        {/* <h1 className={blueTitle}>PÅ GOD T<FontAwesomeIcon icon={faPaw} />SS</h1> */}
         <h2 className={redTitle}>(f.d Skaraskoges hundpensionat)</h2>
-
+        
 
       </div>
     );

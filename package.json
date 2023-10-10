@@ -1,8 +1,8 @@
 {
   "name": "godtass-website",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://ADanielCC.github.io/goodboi/",
+  "private": false,
+  
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
@@ -22,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": [
