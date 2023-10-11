@@ -43,39 +43,44 @@ class ContentManager extends Component {
 
     return (
       <div className="content-manager">
+
         <div className="sections-wrapper">
+          
         <div className="button-wrapper">
-          <button
-            onClick={() => this.setActiveSection("landing")}
-            className={activeSection === "landing" ? "active" : ""}
-          >
-            Start
-          </button>
-          <button
-            onClick={() => this.setActiveSection("about")}
-            className={activeSection === "about" ? "active" : ""}
-          >
-            Om oss
-          </button>
-          <button
-            onClick={() => this.setActiveSection("contact")}
-            className={activeSection === "contact" ? "active" : ""}
-          >
-            Info
-          </button>
-          <button
-            onClick={() => this.setActiveSection("messaging")}
-            className={activeSection === "messaging" ? "active" : ""}
-          >
-            Kontakta oss
-          </button>
-          <button
-            onClick={() => this.setActiveSection("gallery")}
-            className={activeSection === "gallery" ? "active" : ""}
-          >
-            Bilder
-          </button>
-        </div>
+  <button
+    onClick={() => this.setActiveSection("landing")}
+    className={activeSection === "landing" ? "active" : ""}
+  >
+    Start
+  </button>
+  <button
+    onClick={() => this.setActiveSection("about")}
+    className={activeSection === "about" ? "active" : ""}
+  >
+    Om oss
+  </button>
+  <button
+    onClick={() => this.setActiveSection("contact")}
+    className={activeSection === "contact" ? "active" : ""}
+  >
+    Info
+  </button>
+  <button
+    onClick={() => this.setActiveSection("messaging")}
+    className={activeSection === "messaging" ? "active" : ""}
+  >
+    Kontakta oss
+  </button>
+  <button
+    onClick={() => this.setActiveSection("gallery")}
+    className={activeSection === "gallery" ? "active" : ""}
+  >
+    Bilder
+  </button>
+</div>
+
+
+
           <Services className="content" {...commonProps} />
           <LinkButtons {...commonProps} />
 
@@ -86,7 +91,7 @@ class ContentManager extends Component {
           {activeSection === "gallery" && <Gallery className="content" images={images} {...commonProps} />}
         </div>
 
-        
+
       </div>
     );
   }

@@ -1,110 +1,77 @@
+/* Base styles for .content-manager */
 .content-manager {
   width: 50%;
-  /* Adjust the width as needed */
   height: 100vh;
-  /* background-color: black; */
-  color: white;
-  /* Set the text color to white */
   position: fixed;
   top: 0;
   right: 0;
   overflow-y: scroll;
   z-index: 1;
-  /* Enable vertical scrolling if content overflows */
+  border-left: 2px rgb(80, 80, 80) solid;
+  color: white;
 }
 
+/* Padding for .scrollable-content */
 .scrollable-content {
   padding: 20px;
-  /* Add padding to the content area */
 }
 
+/* Styles for .content */
 .content {
-  /* background-color: red; */
   margin: 15px;
   padding: 10px;
 }
 
+/* Styles for .sections-wrapper */
 .sections-wrapper {
   margin-right: 50px;
-  /* Adjust the margin as needed */
   background-color: rgb(255, 255, 255);
   color: rgb(75, 75, 75);
-  font-size: large;
   font-family: Arial, Helvetica, sans-serif;
-  /* font-family: 'Zilla Slab'; */
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
-  font-style: normal;
   line-height: 1.5;
   width: 90%;
-  margin: 15px;
-  margin-left: 25px;
-
-  -webkit-font-smoothing: antialiased;
-
-
+  margin: 15px 0 0 25px; /* Adjusted margin for better readability */
   padding: 12px;
   border-radius: 15px;
-
+  -webkit-font-smoothing: antialiased;
 }
 
+/* Title color styles */
 .red-title {
-  /* color: rgb(216, 74, 74); */
-  color: rgb(46, 85, 168);
-}
-.blue-title{
-  color:rgb(58, 54, 54);
+  color: rgb(49, 83, 235);
 }
 
-/* Style for the buttons in .content-manager */
+.blue-title {
+  color: rgb(58, 54, 54);
+}
+
+/* Shared styles for buttons */
+.button-wrapper button,
 .content-manager .content-manager button {
-  color: black; /* Set the text color to black */
-  background: none; /* Remove button background */
-  border: none; /* Remove button border */
-  cursor: pointer; /* Add pointer cursor for hover effect */
-  font-size: 16px; /* Set the font size as desired */
-  text-decoration: none; /* Remove default text underline */
-  margin: 5px; /* Add some margin between buttons */
-  transition: color 0.3s, border-bottom 0.3s; /* Add smooth transition for color change and underline */
+  color: rgb(44, 44, 44);
+  background: white;
+  border: 2px solid gray; /* Add border to the buttons */
+  border-radius: 20px; /* Add rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 5px;
+  padding: 5px 15px; /* Add padding to the buttons */
+  transition: background 0.3s, color 0.3s; /* Add smooth transitions */
 }
 
-/* Style for the active button in .content-manager */
+/* Active button styles */
+.button-wrapper button.active,
 .content-manager .content-manager button.active {
-  border-bottom: 2px solid red; /* Add red underline for active button */
-  transition: color 0.3s, border-bottom 0.3s; /* Add smooth transition for color change and underline */
+  background: gray; /* Change background color for active button */
+  color: white; /* Change text color for active button */
 }
 
-/* Hover effect in .content-manager */
+/* Hover effect for buttons */
+.button-wrapper button:hover,
 .content-manager .content-manager button:hover {
-  color: red; /* Change text color to red on hover */
-  transition: color 0.3s; /* Add smooth transition for color change */
-}
-
-.button-wrapper button {
-  color: black; /* Set the text color to black */
-  background: none; /* Remove button background */
-  border: none; /* Remove button border */
-  cursor: pointer; /* Add pointer cursor for hover effect */
-  font-size: 16px; /* Set the font size as desired */
-  text-decoration: none; /* Remove default text underline */
-  margin: 5px; /* Add some margin between buttons */
-  transition: color 0.3s, border-bottom 0.3s; /* Add smooth transition for color change and underline */
-}
-
-/* Style for the active button in .button-wrapper */
-.button-wrapper button.active {
-  border-bottom: 2px solid red; /* Add red underline for active button */
-  transition: color 0.3s, border-bottom 0.3s; /* Add smooth transition for color change and underline */
-}
-
-/* Hover effect in .button-wrapper */
-.button-wrapper button:hover {
-  color: red; /* Change text color to red on hover */
-  transition: color 0.3s; /* Add smooth transition for color change */
-}
-
-.button-wrapper{
-  user-select: none;
-  
+  background: rgb(54, 73, 245); /* Change background color on hover */
+  color: white; /* Change text color on hover */
 }

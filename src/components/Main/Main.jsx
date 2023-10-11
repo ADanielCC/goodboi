@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <div>
     <Logo/>
-      <ContentManager/>
+    <ContentManager/>
       
       {/* Add other components here */}
     </div>
