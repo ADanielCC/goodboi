@@ -12,7 +12,7 @@ export default class Pricing extends Component {
     render() {
 
         // const { className,redTitle,blueTitle} = this.props; // Get the className prop
-        const { className, redTitle, currentLanguage, toggleLanguage } = this.props;
+        const { className, redTitle, currentLanguage } = this.props;
 
 
         const contentEnglish = {
@@ -46,7 +46,7 @@ export default class Pricing extends Component {
           {listItems}
         </ul>
         {/* You can add buttons to toggle language within this component */}
-        <button onClick={toggleLanguage}>Toggle Language</button>
+        {/* <button onClick={toggleLanguage}>Toggle Language</button> */}
       </div>
         );
     }

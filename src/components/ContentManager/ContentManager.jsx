@@ -97,12 +97,15 @@ class ContentManager extends Component {
             </button>
 
 
-            {/* Language change button!! */}
-            <button onClick={this.toggleLanguage}>
-              {this.state.currentLanguage === "english" ? "Svenska" : "English"}
-            </button>
+           
 
           </div>
+           {/* Language change button!! */}
+           <button onClick={this.toggleLanguage}
+                   className="flag-button"
+           >
+              {this.state.currentLanguage === "english" ? "Svenska" : "English"}
+            </button>
 
 
 
