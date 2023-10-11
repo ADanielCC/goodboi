@@ -24,8 +24,14 @@
   max-width: 100%;
   height: auto;
   cursor: pointer;
-  transition: transform 0.3s;
+  border-radius: 10px;
+  
 }
+.full-size-map:hover {
+ transform: scale(1.05);
+ transition: transform 0.5s;
+ box-shadow: 10px 5px 5px rgb(68, 68, 68);
+  }
 
 .full-size {
   position: fixed;
@@ -38,7 +44,8 @@
 }
 
 .full-size-map-container:not(.full-size) .full-size-map:hover {
-  transform: scale(1.1); /* Add a slight hover zoom effect when not in full size mode */
+  transform: scale(1.05); /* Add a slight hover zoom effect when not in full size mode */
+  transition: transform 0.5s;
 }
 
 .full-size-map-container {
@@ -70,10 +77,11 @@
   top: 70px;
   right: 10%;
   font-size: 50px;
-  color: white;
+  color: rgba(255, 255, 255, 0.788);
   cursor: pointer;
   transition: transform 2s;
   z-index: 10;
+ 
 }
 
 .close-button:hover {
