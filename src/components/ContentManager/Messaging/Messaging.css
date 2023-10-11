@@ -1,43 +1,82 @@
-/* Add this CSS to your Messaging.css file */
-
-/* Container for each form field */
-.form-field {
-    
+.linkButtonsWrapper {
+    /* background-color: teal; */
     display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Align input fields to the right */
-    margin-bottom: 10px; /* Adjust the spacing between fields */
-  }
-  
-  /* Label for the form field */
-  .form-label {
-    
-    flex: 1;
-    text-align: right;
-    margin-right: 10px; /* Adjust the spacing between label and input */
-    font-weight: bold; /* Make labels bold, if desired */
-  }
-  
-  /* Input fields (text, email, tel) */
-  .form-input {
-    flex: 2;
-    padding: 5px; /* Adjust padding as needed */
-  }
-  
-  /* Textarea for the message field */
-  .form-textarea {
-    flex: 2;
-    padding: 5px; /* Adjust padding as needed */
-    height: 150px; /* Adjust the height of the textarea */
-  }
-  
-  /* Button for submitting */
-  .form-button {
-    margin-top: 10px; /* Adjust the spacing between the textarea and the button */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    z-index: 500;
+}
+
+/* Style for the contact buttons */
+.contact-buttons {
+    display: flex;
+    padding-right: 50px;
+    flex-direction: row; /* Arrange icons horizontally */
+}
+
+/* Style for the email button */
+.email-button,
+.phone-button,
+.facebook-button {
+    text-decoration: none;
+    margin-right: 10px; /* Adjust spacing between icons */
+    font-size: 55px; /* Adjust the size of the icons */
+    margin: right 15px;
+    transition: transform 0.3s, filter 0.3s; /* Add filter transition */
+}
+
+.email-button {
+    margin-right: 25px;
+    color: #f76767;
+    margin-left: 15px;
+    transition: transform 0.3s, filter 0.3s; /* Add filter transition */
+}
+
+.facebook-button {
+    color: rgb(79, 97, 253);
+}
+
+.phone-button {
+    color: #23f123;
+    margin-left: 15px;
+}
+
+/* Add this CSS rule to change the font size of the inputs */
+.form-field input {
+    font-size: 35px; /* Adjust the font size as needed */
   }
 
-  .form-wrapper{
-    font-size:30px;
-    color:red;
+.email-button:hover,
+facebook-button:hover,
+phone-button:hover {
+    transform: scale(1.2);
+    filter: saturate(1.5); /* Adjust saturation level (1.5 for more saturation) */
+    transition: transform 0.5s, filter 0.5s; /* Adjust transition duration */
+}
+.form-wrapper input {
+    font-size: 16px; /* Adjust the font size as needed */
   }
-  
+
+
+  .form-button {    
+    
+    width: 120px;
+    height: 50px;
+    color: rgb(44, 44, 44);
+    background: white;
+    border: 2px solid gray; /* Add border to the buttons */
+    border-radius: 10px; /* Add rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px 15px; /* Add padding to the buttons */
+    transition: background 0.3s, color 0.3s; /* Add smooth transitions */
+    user-select: none;
+    margin: 15px;
+   
+  }
+
+  .form-button:hover {
+    background: #2655d8; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+  }

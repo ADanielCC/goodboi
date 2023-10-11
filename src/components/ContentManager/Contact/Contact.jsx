@@ -4,6 +4,7 @@ import React, { Component } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import './Contact.css'
 
 class Contact extends Component {
   render() {
@@ -31,27 +32,25 @@ class Contact extends Component {
     
 
     return (
-      <div
-        ref={this.props.contactRef}
-        className={className}
-      >
-        <h2 className={redTitle}>{content.title}</h2>
-        <p>{content.text} <a href="tel:0511/57400">0511/57400 </a> alt. <a href="tel:070-565-85-82">0705658582</a> </p>
-        <p>E-mail: <a href="mailto:michelle.g@bahnhof.se">michelle.g@bahnhof.se</a></p>
-        <p>
-        <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faMapMarkerAlt} />
-        {content.text2} : Ledsjö Elfvik 1, 53392 Lundsbrunn.</a>
-         <p>{content.directions}</p>  </p>
+      <div ref={this.props.contactRef} className={className}>
+  <h2 className={redTitle}>{content.title}</h2>
+  <p className="contact-links">
+    {content.text} <a href="tel:0511/57400">0511/57400</a> alt. <a href="tel:070-565-85-82">070-565 85 82</a>
+  </p>
+  <p className="contact-links">E-mail: <a href="mailto:michelle.g@bahnhof.se">michelle.g@bahnhof.se</a></p>
+  <p className="contact-links">
+    <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={faMapMarkerAlt} />
+      {content.text2} : Ledsjö Elfvik 1, 53392 Lundsbrunn.
+    </a>
+    <p className="no-hover">{content.directions}</p>
+  </p>
 
-         <div>
-     
-     
      
       {/* <GoogleMapsEmbed></GoogleMapsEmbed> */}
       {/* on hold until googleMaps API key */}
 
-    </div>
+    
 
       </div>
     );

@@ -73,7 +73,7 @@
 /* Hover effect for buttons */
 .button-wrapper button:hover,
 .content-manager .content-manager button:hover {
-  background: rgb(54, 73, 245); /* Change background color on hover */
+  background: #2655d8; /* Change background color on hover */
   color: white; /* Change text color on hover */
 }
 

@@ -46,4 +46,5 @@
     transform: scale(1.2);
     filter: saturate(2); /* Adjust saturation level (1.5 for more saturation) */
     transition: transform 0.5s, filter 0.5s; /* Adjust transition duration */
+    
 }

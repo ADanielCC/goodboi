@@ -18,7 +18,7 @@ export default class Pricing extends Component {
         const contentEnglish = {
             title: 'We offer',
             description: 'Explore our pricing and services below:',
-            list: 'Small dog $10, Big dog $20, Medication $5, Monthly subscription as agreed',
+            list: 'Small dog 100kr, Big dog 200 kr, Medication 50 kr, Monthly subscription as agreed',
           };
       
           const contentSwedish = {

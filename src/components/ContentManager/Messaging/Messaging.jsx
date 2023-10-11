@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './Messaging.css';
 class Messaging extends Component {
   constructor(props) {
     super(props);
@@ -65,6 +65,7 @@ class Messaging extends Component {
       width: "100%", // Make input fields fill their container
       marginBottom: "15px", // Add space between fields
       height: "40px", // Adjust the height of the input fields
+      
     };
 
     const textareaStyle = {

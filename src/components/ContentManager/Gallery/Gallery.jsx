@@ -13,6 +13,7 @@ class Gallery extends Component {
       isFullscreen: false,
       pauseOnHover: true,
       activeArrow: null, // Track the active arrow (left or right)
+      isLoading: true,
     };
   }
 
@@ -26,24 +27,40 @@ class Gallery extends Component {
     this.setState({ activeArrow: arrow });
   };
 
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ isLoading: false });
+    }, 1000); // Adjust the delay as needed
+  }
+
+
+
+
+
   render() {
     const { isFullscreen, pauseOnHover, activeArrow } = this.state;
-    const { images,currentLanguage  } = this.props;
+    const { images, currentLanguage } = this.props;
 
     const content = currentLanguage === 'english'
       ? {
-       
-        text: 'Here you can see pictures of our team at work:'
-        
+        text: 'Here you can see pictures of our team at work:',
       }
       : {
-       
         text: 'Här kan du se bilder av vårt team i arbete:'
       };
 
+    if (this.state.isLoading) {
+      // Display the loading GIF or spinner
+      return (
+        <div className="loading-container">
+          <div className="spinner" />
+        </div>
+      );
+    }
+
     return (
       <div className={`gallery ${isFullscreen ? "fullscreen" : ""}`}>
-
         <p>{content.text}</p>
 
         <Carousel autoPlay={!isFullscreen} stopOnHover={pauseOnHover} renderArrowPrev={(onClickHandler, hasPrev, label) =>
@@ -86,9 +103,6 @@ class Gallery extends Component {
             </div>
           ))}
         </Carousel>
-
-
-
       </div>
     );
   }

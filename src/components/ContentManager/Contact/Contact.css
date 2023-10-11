@@ -1,0 +1,19 @@
+.contact-links a, .contact-links p {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s, border-radius 0.3s; /* Add transition for border-radius */
+  }
+  .contact-links a {
+    text-decoration: underline;
+    color: blue;
+  }
+  
+  .contact-links a:hover:not(.no-hover),
+  .contact-links p:hover:not(.no-hover) {
+    background-color: #2655d8;
+    color: #fff;
+    border-radius: 10px;
+  }
