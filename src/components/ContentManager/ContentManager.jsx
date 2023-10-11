@@ -81,13 +81,13 @@ class ContentManager extends Component {
               onClick={() => this.setActiveSection("contact")}
               className={activeSection === "contact" ? "active" : ""}
             >
-              Info
+              {this.state.currentLanguage === "english" ? "Contact us" : "Kontakta oss"}
             </button>
             <button
               onClick={() => this.setActiveSection("messaging")}
               className={activeSection === "messaging" ? "active" : ""}
             >
-              {this.state.currentLanguage === "english" ? "Contact Us" : "Kontakta oss"}
+              {this.state.currentLanguage === "english" ? "Message us" : "Meddela oss"}
             </button>
             <button
               onClick={() => this.setActiveSection("gallery")}

@@ -28,12 +28,23 @@ class Gallery extends Component {
 
   render() {
     const { isFullscreen, pauseOnHover, activeArrow } = this.state;
-    const { images } = this.props;
+    const { images,currentLanguage  } = this.props;
+
+    const content = currentLanguage === 'english'
+      ? {
+       
+        text: 'Here you can see pictures of our team at work:'
+        
+      }
+      : {
+       
+        text: 'Här kan du se bilder av vårt team i arbete:'
+      };
 
     return (
       <div className={`gallery ${isFullscreen ? "fullscreen" : ""}`}>
 
-        <p>Här kan du se bilder av vårt team i arbete</p>
+        <p>{content.text}</p>
 
         <Carousel autoPlay={!isFullscreen} stopOnHover={pauseOnHover} renderArrowPrev={(onClickHandler, hasPrev, label) =>
           hasPrev && (
