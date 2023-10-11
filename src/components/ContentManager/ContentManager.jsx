@@ -20,6 +20,7 @@ class ContentManager extends Component {
 
     this.state = {
       activeSection: "landing",
+      currentLanguage: "english", // Set the initial language
     };
   }
 
@@ -28,11 +29,20 @@ class ContentManager extends Component {
     this.setState({ activeSection: section });
   };
 
+  // Function to toggle the language
+  toggleLanguage = () => {
+    this.setState((prevState) => ({
+      currentLanguage: prevState.currentLanguage === "english" ? "swedish" : "english",
+    }));
+  };
+
   render() {
-    const { activeSection } = this.state;
+    const { activeSection, currentLanguage } = this.state;
     const commonProps = {
       redTitle: "red-title",
       blueTitle: "blue-title",
+      currentLanguage, // Pass the current language to child components
+      toggleLanguage: this.toggleLanguage, // Pass the language toggle function to child components
     };
 
     const images = [
@@ -44,10 +54,10 @@ class ContentManager extends Component {
 
     return (
       <div className="content-manager">
-
         <div className="sections-wrapper">
-
           <div className="button-wrapper">
+
+
             <button
               onClick={() => this.setActiveSection("landing")}
               className={activeSection === "landing" ? "active" : ""}
@@ -58,14 +68,14 @@ class ContentManager extends Component {
               onClick={() => this.setActiveSection("about")}
               className={activeSection === "about" ? "active" : ""}
             >
-              Om oss
+              {this.state.currentLanguage === "english" ? "About us" : "Om oss"}
+              {/* Om oss */}
             </button>
-
             <button
               onClick={() => this.setActiveSection("pricing")}
               className={activeSection === "pricing" ? "active" : ""}
             >
-              Våra tjänster
+              {this.state.currentLanguage === "english" ? "Our Services" : "Våra tjänster"}
             </button>
             <button
               onClick={() => this.setActiveSection("contact")}
@@ -77,30 +87,34 @@ class ContentManager extends Component {
               onClick={() => this.setActiveSection("messaging")}
               className={activeSection === "messaging" ? "active" : ""}
             >
-              Kontakta oss
+              {this.state.currentLanguage === "english" ? "Contact Us" : "Kontakta oss"}
             </button>
             <button
               onClick={() => this.setActiveSection("gallery")}
               className={activeSection === "gallery" ? "active" : ""}
             >
-              Bilder
+              {this.state.currentLanguage === "english" ? "Gallery" : "Bilder"}
             </button>
+
+
+            {/* Language change button!! */}
+            <button onClick={this.toggleLanguage}>
+              {this.state.currentLanguage === "english" ? "Svenska" : "English"}
+            </button>
+
           </div>
 
 
 
           <Services className="content" {...commonProps} />
           <LinkButtons {...commonProps} />
-
           {activeSection === "landing" && <Landing className="content" {...commonProps} />}
           {activeSection === "about" && <AboutUs className="content" {...commonProps} />}
-          {activeSection === "pricing" && <Pricing className="content" {...commonProps} setActiveSection={this.setActiveSection}/>}
+          {activeSection === "pricing" && <Pricing className="content" {...commonProps} />}
           {activeSection === "contact" && <Contact className="content" {...commonProps} />}
           {activeSection === "messaging" && <Messaging className="content" {...commonProps} />}
           {activeSection === "gallery" && <Gallery className="content" images={images} {...commonProps} />}
         </div>
-
-
       </div>
     );
   }

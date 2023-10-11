@@ -12,17 +12,17 @@ class LinkButtons extends Component {
       <div className='linkButtonsWrapper'>
         <div className="contact-buttons center-align">
 
-          <a href="mailto:michelle.g@bahnhof.se" className="email-button">
-          <FontAwesomeIcon icon={faEnvelope} />
-          </a>
+        <a href="mailto:michelle.g@bahnhof.se" className="email-button" title="E-mail">
+  <FontAwesomeIcon icon={faEnvelope} />
+</a>
 
-          <a href="https://www.facebook.com" className="facebook-button">
-            <FontAwesomeIcon icon={faFacebook} />
-          </a>
+<a href="https://www.facebook.com" className="facebook-button" title="Vår Facebook sida">
+  <FontAwesomeIcon icon={faFacebook} />
+</a>
 
-          <a href="tel:070-565-85-82" className="phone-button">
-          <FontAwesomeIcon icon={faPhone} />
-          </a>
+<a href="tel:070-565-85-82" className="phone-button" title="Ring oss">
+  <FontAwesomeIcon icon={faPhone} />
+</a>
 
         </div>
       </div>

@@ -60,6 +60,7 @@
   margin: 5px;
   padding: 5px 15px; /* Add padding to the buttons */
   transition: background 0.3s, color 0.3s; /* Add smooth transitions */
+  user-select: none;
 }
 
 /* Active button styles */

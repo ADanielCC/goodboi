@@ -32,6 +32,9 @@ class Gallery extends Component {
 
     return (
       <div className={`gallery ${isFullscreen ? "fullscreen" : ""}`}>
+
+        <p>Här kan du se bilder av vårt team i arbete</p>
+
         <Carousel autoPlay={!isFullscreen} stopOnHover={pauseOnHover} renderArrowPrev={(onClickHandler, hasPrev, label) =>
           hasPrev && (
             <button
@@ -72,6 +75,9 @@ class Gallery extends Component {
             </div>
           ))}
         </Carousel>
+
+
+
       </div>
     );
   }
