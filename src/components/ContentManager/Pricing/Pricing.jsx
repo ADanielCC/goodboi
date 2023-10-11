@@ -4,9 +4,10 @@ import './Pricing.css';
 export default class Pricing extends Component {
 
 
-    handleContactClick = () => {
+    handleContactClick = (e) => {
+        e.preventDefault();
         // Call the setActiveSection function to change the active section to "contact"
-        this.props.setActiveSection("messaging");
+        this.props.setActiveSection("contact");
       };
   render() {
 
@@ -25,7 +26,12 @@ export default class Pricing extends Component {
        <li>Medicinering av hund , 50kr per dag </li>
        <li>Månads abonnemang enligt överenskommelse</li>
        </ul>
-       <p><a className="contact-link underline" onClick={this.handleContactClick}>Kontakta oss</a> gärna för mer information!</p>
+       <p><a 
+       className="contact-link underline" 
+       onClick={this.handleContactClick}
+       href="#contact"
+       >
+        Kontakta oss</a> gärna för mer information!</p>
 
 
       </div>
