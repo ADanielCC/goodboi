@@ -20,7 +20,7 @@ class ContentManager extends Component {
 
     this.state = {
       activeSection: "landing",
-      currentLanguage: "english", // Set the initial language
+      currentLanguage: "swedish", // Set the initial language
     };
   }
 
