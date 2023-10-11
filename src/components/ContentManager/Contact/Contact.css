@@ -1,21 +1,79 @@
-.contact-links a, .contact-links p {
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #000;
-    transition: background-color 0.3s, color 0.3s, border-radius 0.3s; /* Add transition for border-radius */
-  }
-  .contact-links a {
-    text-decoration: underline;
-    color: blue;
-  }
-  
-  .contact-links a:hover:not(.no-hover),
-  .contact-links p:hover:not(.no-hover) {
-    background-color: #2655d8;
-    color: #fff;
-    border-radius: 10px;
-  }
+.contact-links a,
+.contact-links p {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s, border-radius 0.3s; /* Add transition for border-radius */
+}
 
-  
+.contact-links a {
+  text-decoration: underline;
+  color: blue;
+}
+
+.contact-links a:hover:not(.no-hover),
+.contact-links p:hover:not(.no-hover) {
+  background-color: #2655d8;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.full-size-map {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.full-size {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3; /* Adjust the z-index to position it above other content */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+
+.full-size-map-container:not(.full-size) .full-size-map:hover {
+  transform: scale(1.1); /* Add a slight hover zoom effect when not in full size mode */
+}
+
+.full-size-map-container {
+  text-align: center;
+  bottom: 15px;
+  max-width: 80%; /* Control the width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.full-size-map-container.full-size {
+  max-width: 100%; /* Expands to full width when in full size */
+}
+
+.full-size-map {
+  user-select: none;
+  width: 80%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+  position: relative;
+  top: 15%; /* Adjust the top position to move it further down */
+  left: 0;
+  margin: 0 auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 90px;
+  right: 90px;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.close-button:hover {
+  color: red;
+}
