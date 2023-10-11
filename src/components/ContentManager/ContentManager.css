@@ -7,7 +7,7 @@
   right: 0;
   overflow-y: scroll;
   z-index: 1;
-  border-left: 2px rgb(80, 80, 80) solid;
+  border-left: 1px rgb(80, 80, 80) solid;
   color: white;
 }
 
