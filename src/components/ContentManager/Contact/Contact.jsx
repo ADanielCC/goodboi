@@ -5,9 +5,9 @@ import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 class Contact extends Component {
   render() {
-    const { className,redTitle,blueTitle} = this.props; // Get the className prop
+    const { className,redTitle} = this.props; // Get the className prop
 
-    const address = "Ledsjö Elfvik 1, 533 92 Lundsbrunn.";
+    // const address = "Ledsjö Elfvik 1, 533 92 Lundsbrunn.";
 
     const googleMapsUrl = `https://www.google.com/maps/place/Skaraskogens+hundpensionat/@58.4647466,13.4834004,17z/data=!3m1!4b1!4m6!3m5!1s0x465b1f469faf35e9:0xf82b54525a99ee73!8m2!3d58.4647466!4d13.4859753!16s%2Fg%2F11fm4w3syk?entry=ttu`;
 

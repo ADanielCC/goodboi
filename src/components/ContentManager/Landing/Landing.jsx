@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import { faPaw } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default class Landing extends Component {
   render() {
