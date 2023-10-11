@@ -4,7 +4,8 @@ class AboutUs extends Component {
 
 
   render() {
-    const { className,redTitle,blueTitle} = this.props;
+    // const { className,redTitle,blueTitle} = this.props;
+    const { className,redTitle} = this.props;
     return (
       <div ref={this.props.contactRef}
           className={className}

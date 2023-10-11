@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import GoogleMapsEmbed from "../GoogleMapsEmbed/GoogleMapsEmbed";
+// import GoogleMapsEmbed from "../GoogleMapsEmbed/GoogleMapsEmbed";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
