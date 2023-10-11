@@ -18,23 +18,32 @@
 .phone-button,
 .facebook-button {
     text-decoration: none;
-    
     margin-right: 10px; /* Adjust spacing between icons */
     font-size: 55px; /* Adjust the size of the icons */
     margin: right 15px;
+    transition: transform 0.3s;
 }
-.email-button{
+
+.email-button {
     margin-right: 25px;
-    color: #f76767; 
+    color: #f76767;
     margin-left: 15px;
+    transition: transform 0.3s;
 }
+
 .facebook-button {
-    color:rgb(79, 97, 253);
+    color: rgb(79, 97, 253);
 }
-.phone-button{
+
+.phone-button {
     color: #23f123;
     margin-left: 15px;
 }
 
-
-
+.email-button:hover,
+.facebook-button:hover,
+.phone-button:hover {
+    transform: scale(1.2);
+    filter: saturate(2); /* Adjust saturation level (1.5 for more saturation) */
+    transition: transform 0.5s, filter 0.5s; /* Adjust transition duration */
+}

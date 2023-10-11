@@ -12,6 +12,11 @@ class Messaging extends Component {
     };
   }
 
+
+
+
+
+
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
@@ -26,8 +31,34 @@ class Messaging extends Component {
 
   render() {
     // const { className, redTitle, blueTitle } = this.props;
-    const { className, redTitle } = this.props; // Get the className prop
+    const { className, redTitle, currentLanguage } = this.props; // Get the className prop
 
+    const content = currentLanguage === 'english'
+      ? {
+        title: 'Shoot us a message!',
+        text: 'The easiest way to reach us is via this form. We are always happy to hear from you! We look forward to hearing from you.',
+        form: {
+          firstName: 'First name',
+          lastName: 'Last name',
+          email: 'E-mail',
+          phoneNumber: 'Phone number',
+          message: 'Message',
+          submit:'Submit',
+        }
+      }
+      : {
+        title: 'Hör gärna av dig!',
+        text: 'Det enklaste sättet att nå oss är via detta formulär. Vi är alltid glada att höra från dig! Vi ser fram emot att höra av dig.',
+        form: {
+          firstName: 'Förnamn',
+          lastName: 'Efternamn',
+          email: 'E-postadress',
+          phoneNumber: 'Telefon',
+          message: 'Meddelande',
+          submit:'Skicka in',
+        }
+
+      };
 
     const inputStyle = {
       textAlign: "left", // Align input fields to the left
@@ -35,7 +66,7 @@ class Messaging extends Component {
       marginBottom: "15px", // Add space between fields
       height: "40px", // Adjust the height of the input fields
     };
-    
+
     const textareaStyle = {
       textAlign: "left", // Align textarea to the left
       width: "100%", // Make textarea fill its container
@@ -48,16 +79,14 @@ class Messaging extends Component {
         ref={this.props.messagingRef}
         className={className}
       >
-        <h2 className={redTitle}>HÖR GÄRNA AV DIG!</h2>
-        <p>Det enklaste sättet att nå oss är via detta formulär. Vi är alltid glada att höra från dig!
-
-Vi ser fram emot att höra av dig.</p>
+        <h2 className={redTitle}>{content.title}</h2>
+        <p>{content.text}</p>
 
         <div className="form-wrapper">
           <form onSubmit={this.handleSubmit}>
             <div className="form-field">
               <label className="form-label" htmlFor="firstName">
-                Förnamn *
+                {content.form.firstName} *
               </label>
               <input
                 style={inputStyle}
@@ -71,7 +100,7 @@ Vi ser fram emot att höra av dig.</p>
             </div>
             <div className="form-field">
               <label className="form-label" htmlFor="lastName">
-                Efternamn *
+                {content.form.lastName} *
               </label>
               <input
                 style={inputStyle}
@@ -85,7 +114,7 @@ Vi ser fram emot att höra av dig.</p>
             </div>
             <div className="form-field">
               <label className="form-label" htmlFor="email">
-                E-postadress *
+                {content.form.email} *
               </label>
               <input
                 style={inputStyle}
@@ -99,7 +128,7 @@ Vi ser fram emot att höra av dig.</p>
             </div>
             <div className="form-field">
               <label className="form-label" htmlFor="phoneNumber">
-                Telefon
+                {content.form.phoneNumber}
               </label>
               <input
                 style={inputStyle}
@@ -112,7 +141,7 @@ Vi ser fram emot att höra av dig.</p>
             </div>
             <div className="form-field">
               <label className="form-label" htmlFor="message">
-                Meddelande
+                {content.form.message}
               </label>
               <textarea
                 style={textareaStyle}
@@ -125,7 +154,7 @@ Vi ser fram emot att höra av dig.</p>
             </div>
             <div className="form-field">
               <button type="submit" className="form-button">
-                Skicka
+              {content.form.submit}
               </button>
             </div>
           </form>
