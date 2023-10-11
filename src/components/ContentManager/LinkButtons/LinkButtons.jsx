@@ -33,7 +33,7 @@ class LinkButtons extends Component {
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
 
-          <a target="_blank" href="https://www.facebook.com" className="facebook-button" title={content.facebookTitle}>
+          <a href="https://www.facebook.com" className="facebook-button" title={content.facebookTitle}>
             <FontAwesomeIcon icon={faFacebook} />
           </a>
 
