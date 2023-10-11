@@ -13,9 +13,17 @@ class Contact extends Component {
   }
 
   toggleMapSize = () => {
-    this.setState((prevState) => ({
-      isMapFullSize: !prevState.isMapFullSize,
-    }));
+    if (!this.state.isMapFullSize) {
+      this.setState({
+        isMapFullSize: true,
+      });
+    }
+  };
+
+  closeFullSizeMap = () => {
+    this.setState({
+      isMapFullSize: false,
+    });
   };
 
   render() {
@@ -59,19 +67,31 @@ class Contact extends Component {
           </a>
           <p className="no-hover">{content.directions}</p>
         </p>
-        <div  className={`full-size-map-container ${this.state.isMapFullSize ? 'full-size' : ''}`}>
-          {this.state.isMapFullSize && (
-            <div className="close-button" onClick={this.toggleMapSize}>
+        {this.state.isMapFullSize ? (
+          <div className="full-size-map-container full-size" onClick={this.closeFullSizeMap}>
+            <div className="close-button" onClick={this.closeFullSizeMap}>
               X
             </div>
-          )}
+            <img
+              className="full-size-map"
+              alt="Full Size Map"
+              src={fullSizeMap}
+              onClick={(e) => {
+                this.toggleMapSize();
+                e.stopPropagation();
+                // prevents map from closing when clicked in fullsize
+              }}
+            />
+          </div>
+        ) : (
           <img
             className="full-size-map"
             alt="Full Size Map"
             src={fullSizeMap}
             onClick={this.toggleMapSize}
+            
           />
-        </div>
+        )}
       </div>
     );
   }
