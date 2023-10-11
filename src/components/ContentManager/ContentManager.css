@@ -1,5 +1,6 @@
 /* Base styles for .content-manager */
 .content-manager {
+  /* Adjust the width to 50% on larger screens */
   width: 50%;
   height: 100vh;
   position: fixed;
@@ -32,7 +33,7 @@
   font-weight: 400;
   line-height: 1.5;
   width: 90%;
-  margin: 15px 0 0 25px; /* Adjusted margin for better readability */
+  margin: 15px 0 0 25px;
   padding: 12px;
   border-radius: 15px;
   -webkit-font-smoothing: antialiased;
@@ -52,31 +53,30 @@
 .content-manager .content-manager button {
   color: rgb(44, 44, 44);
   background: white;
-  border: 2px solid gray; /* Add border to the buttons */
-  border-radius: 20px; /* Add rounded corners */
+  border: 2px solid gray;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
   text-decoration: none;
   margin: 5px;
-  padding: 5px 15px; /* Add padding to the buttons */
-  transition: background 0.3s, color 0.3s; /* Add smooth transitions */
+  padding: 5px 15px;
+  transition: background 0.3s, color 0.3s;
   user-select: none;
 }
 
 /* Active button styles */
 .button-wrapper button.active,
 .content-manager .content-manager button.active {
-  background: gray; /* Change background color for active button */
-  color: white; /* Change text color for active button */
+  background: gray;
+  color: white;
 }
 
 /* Hover effect for buttons */
 .button-wrapper button:hover,
 .content-manager .content-manager button:hover {
-  background: #2655d8; /* Change background color on hover */
-  color: white; /* Change text color on hover */
+  background: #2655d8;
+  color: white;
 }
-
 
 .flag-button {
   width: 40px;
@@ -113,17 +113,38 @@
 }
 
 .flag-button:hover .flag-image.english {
-  transform:scale(150%);
-  
+  transform: scale(150%);
 }
 
 .flag-button:hover .flag-image.swedish {
-  transform:scale(150%);
-  
+  transform: scale(150%);
 }
 
-.flag-container{
+.flag-container {
   float: right;
-
 }
 
+@media (max-width: 768px) {
+  /* Add mobile-specific styles here */
+
+  .logo-container {
+    /* Shrink the logo to a tiny corner button */
+    width: 60px; /* Adjust the size as needed */
+    height: 60px; /* Adjust the size as needed */
+    background-color: #ffffff; /* Maintain the background color */
+    position: fixed;
+    top: 10px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    border-radius: 50%; /* Make it a circle */
+  }
+
+  .logo {
+    /* Hide the logo on mobile screens */
+    display: none;
+  }
+
+  .content-manager {
+    /* Make the content manager occupy the full screen width */
+    width: 100%;
+  }
+}
