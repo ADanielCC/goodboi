@@ -27,12 +27,15 @@ class Messaging extends Component {
   render() {
     // const { className, redTitle, blueTitle } = this.props;
     const { className, redTitle } = this.props; // Get the className prop
+
+
     const inputStyle = {
       textAlign: "left", // Align input fields to the left
       width: "100%", // Make input fields fill their container
       marginBottom: "15px", // Add space between fields
       height: "40px", // Adjust the height of the input fields
     };
+    
     const textareaStyle = {
       textAlign: "left", // Align textarea to the left
       width: "100%", // Make textarea fill its container

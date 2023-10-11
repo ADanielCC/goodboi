@@ -3,7 +3,8 @@ import React, { Component } from "react";
 class Services extends Component {
   render() {
 
-    const { className,redTitle,blueTitle} = this.props; // Get the className prop
+    // const { className,redTitle,blueTitle} = this.props; // Get the className prop
+    const { className,redTitle} = this.props;
     return (
       <div ref={this.props.servicesRef}
       className={className}
