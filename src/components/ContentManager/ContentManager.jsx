@@ -56,7 +56,16 @@ class ContentManager extends Component {
       <div className="content-manager">
         <div className="sections-wrapper">
           <div className="button-wrapper">
-
+            <div className="flag-container">
+              <button
+                onClick={this.toggleLanguage}
+                className="flag-button"
+                about="English/Swedish"
+                title="Change language"
+              >
+                <div className={`flag-image ${this.state.currentLanguage === 'english' ? 'english' : 'swedish'}`}></div>
+              </button>
+            </div>
 
             <button
               onClick={() => this.setActiveSection("landing")}
@@ -97,15 +106,10 @@ class ContentManager extends Component {
             </button>
 
 
-           
 
           </div>
-           {/* Language change button!! */}
-           <button onClick={this.toggleLanguage}
-                   className="flag-button"
-           >
-              {this.state.currentLanguage === "english" ? "Svenska" : "English"}
-            </button>
+          {/* Language change button!! */}
+
 
 
 
