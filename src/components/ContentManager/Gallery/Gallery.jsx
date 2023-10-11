@@ -51,7 +51,7 @@ class Gallery extends Component {
       };
 
     if (this.state.isLoading) {
-      // Display the loading GIF or spinner
+     
       return (
         <div className="loading-container">
           <div className="spinner" />
