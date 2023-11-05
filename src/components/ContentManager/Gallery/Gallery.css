@@ -1,5 +1,4 @@
-/* Style the custom arrow buttons */
-/* Style the custom arrow buttons */
+
 .arrow {
     z-index: 3; /* Set a higher z-index to make them appear above images */
     background-color: rgba(0, 0, 0, 0.5); /* Background color for arrows */
